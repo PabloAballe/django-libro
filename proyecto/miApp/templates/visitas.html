@@ -1,0 +1,25 @@
+{%extends "base.html" %}
+
+{% block titulo%}Estamos en visitas{% endblock%}
+
+
+{% block contenido%}
+
+<h1>Estas en visitas</h1>
+<p>Estas personas estan la pagina ahora 5</p>
+
+<h2>Ultimas imagenes añadidas</h2>
+<div class="sidebar">
+  {% for image in image %}
+  <hr>
+
+<div class="imagen">
+  <img src="{{image.imagen.url}}" alt="{{image.titulo}}">
+  <h2>{{image.titulo|title}}</h2>
+  <p>{{image.descripcion}}</p>
+</div>
+
+  {% endfor %}
+</div>
+
+{%endblock%}

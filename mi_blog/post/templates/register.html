@@ -1,0 +1,23 @@
+
+{%extends 'base.html'%}
+
+{%block title%}Register{%endblock%}
+
+{% load material_form %}
+{%block contenido%}
+<div class="login" style="width: 50%; margin-left: 25%;">
+<h2>Registrar usuario</h2>
+
+<form method="POST" style="width: 50%; margin-left: 25%;">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit">Registrar</button>
+</form>
+
+<hr />
+
+<a href="/login">Iniciar sesión</a>
+
+</div>
+
+{%endblock%}

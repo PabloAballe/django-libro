@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block title%}{{post.titulo}}{%endblock%}
+
+{%block contenido%}
+
+
+<div class="post_details" style="margin: 5%;">
+<img src="{{post.image.url}}" alt="{{post.titulo}}" style="width: 50%; margin-left: 25%; border-radius: 10px;">
+<div class="contenido" style="margin-top: 5%;">
+  <h1 style="text-align:center;">{{post.titulo}}</h1>
+  <br>
+  <small style="text-align:center;" >{{post.fecha_de_creacion}}</small>
+  <br>
+  <p sytle="text-align: justify;">{{post.articulo}}</p>
+</div>
+
+</div>
+
+
+
+{%endblock%}

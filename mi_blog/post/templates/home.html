@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%}Home{%endblock%}
+
+{%block contenido%}
+{%include 'bienvenida.html'%}
+<h2 style="margin: 5%;">Últimos artículos</h2>
+<div class="articulos">
+  {%for post in post%}
+  <div class="post">
+  <img src="{{post.image.url}}" class="img_home"alt="{{post.titulo}}"style="float:left;">
+  <div class="text" style="margin-left: 10%;">
+    <h3>{{post.titulo}}</h3>
+    <small>{{post.fecha_de_creacion}}</small>
+    <p class="articulo_res">{{post.articulo}}</p>
+    <a href="{% url 'post' pk=post.pk%}">Ver más...</a>
+  </div>
+
+  </div>
+  <hr>
+  {%endfor%}
+</div>
+
+{%endblock%}
